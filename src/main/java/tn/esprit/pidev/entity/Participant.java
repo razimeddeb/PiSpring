@@ -1,5 +1,6 @@
 package tn.esprit.pidev.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -17,6 +18,7 @@ public class Participant extends User{
     LocalDate birth_date;
     @Enumerated(EnumType.STRING)
     ParticipantType type;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy="participant")
     List<Interview> interviews;
 
