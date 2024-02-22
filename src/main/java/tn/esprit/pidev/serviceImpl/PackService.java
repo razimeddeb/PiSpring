@@ -18,7 +18,7 @@ public class PackService implements IPackService {
     }
 
     @Override
-    public List<Pack> retrivePacks() {
+    public List<Pack> retriveAllPacks() {
         return packRepository.findAll();
     }
 

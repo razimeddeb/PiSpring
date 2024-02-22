@@ -17,8 +17,8 @@ public class PackController {
         return iPackService.addPack(pack);
     }
     @GetMapping("/getAllPack")
-    public List<Pack> retrivePacks() {
-        return iPackService.retrivePacks();
+    public List<Pack> retriveAllPacks() {
+        return iPackService.retriveAllPacks();
     }
     @PutMapping("/UpdatePack")
     public Pack updatePack(@RequestBody Pack pack) {

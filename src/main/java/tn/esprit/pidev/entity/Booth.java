@@ -1,6 +1,5 @@
 package tn.esprit.pidev.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -14,16 +13,16 @@ import java.util.List;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User implements Serializable {
+public class Booth implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long idUser;
-    String firstName;
-    String lastName;
-    String address;
-    String mail ;
-    String password;
-    @OneToMany(cascade = CascadeType.ALL)
-    List<Review>reviews;
+    Long idBooth;
+    @Enumerated(EnumType.STRING)
+    StatusBooth statusBooth;
+    @ManyToMany(mappedBy = "booths")
+    List<Pack>packs;
+    @ManyToMany
+    List<Client>clients;
+
 
 }

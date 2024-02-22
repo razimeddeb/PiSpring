@@ -24,4 +24,6 @@ public class Client extends  User{
     Pack pack;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="clienti")
     List<Interview>interviews;
+    @ManyToMany(mappedBy = "clients")
+    List<Booth>booths;
 }

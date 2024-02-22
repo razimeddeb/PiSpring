@@ -29,6 +29,8 @@ public class Pack implements Serializable {
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy="pack")
     List<Client>clients;
+    @ManyToMany
+    List<Booth>booths;
 
 
 
