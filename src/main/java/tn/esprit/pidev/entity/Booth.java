@@ -19,10 +19,10 @@ public class Booth implements Serializable {
     Long idBooth;
     @Enumerated(EnumType.STRING)
     StatusBooth statusBooth;
-    @ManyToMany(mappedBy = "booths")
-    List<Pack>packs;
-    @ManyToMany
-    List<Client>clients;
+    @ManyToOne
+    Pack pack;
+    @OneToOne
+    Client client;
 
 
 }

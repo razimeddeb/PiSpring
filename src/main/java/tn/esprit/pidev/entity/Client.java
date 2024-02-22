@@ -22,8 +22,8 @@ public class Client extends  User{
     List<Evenement>evenements;
     @ManyToOne
     Pack pack;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="clienti")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="client")
     List<Interview>interviews;
-    @ManyToMany(mappedBy = "clients")
-    List<Booth>booths;
+    @OneToOne
+    Booth booth;
 }

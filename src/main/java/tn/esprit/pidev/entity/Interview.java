@@ -22,5 +22,5 @@ public class Interview implements Serializable {
     @ManyToOne
     Participant participant;
     @ManyToOne
-    Client clienti;
+    Client client;
 }
