@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import tn.esprit.pidev.entity.Review;
 @Repository
-public interface ReviewReposo extends JpaRepository<Review,Long> {
+public interface ReviewRepository extends JpaRepository<Review,Long> {
 }

@@ -15,6 +15,7 @@ import java.util.List;
 public class EvenementController {
     IEvenementService iEvenementService;
     @PostMapping("/addEvenement")
+
     public Evenement addEvenement(@RequestBody Evenement event) {
         return iEvenementService.addEvenement(event);
     }
